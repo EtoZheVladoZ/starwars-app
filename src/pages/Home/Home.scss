@@ -1,0 +1,110 @@
+@import "../../styles/colors.scss";
+
+.wrapper__filters {
+  border: solid 2px $secondary;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 5px darken($primary, 10%);
+  width: 250px;
+  height: 620px;
+  background-color: $primary;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-right: 40px;
+
+
+  .filter-years {
+
+    &-title {
+      padding: 5px;
+      display: flex;
+      width: 200px;
+      align-items: baseline;
+      justify-content: space-between;
+
+      input {
+        cursor: pointer;
+      }
+    }
+
+    &-inputs {
+      margin-left: 5px;
+
+      input {
+        background-color: $secondary;
+        border: none;
+        border-radius: 5px;
+        padding: 3px;
+        width: 40px;
+        margin-right: 3px;
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &:read-only {
+          background-color: darken($secondary, 7%);
+        }
+      }
+
+      span {
+        margin: auto 7px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 15px 15px darken($background, 5%);
+    border: solid 6px transparent;
+    border-radius: 10px;
+  }
+}
+
+.wrapper__cards {
+  border: solid 2px $secondary;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 5px darken($primary, 10%);
+  width: 900px;
+  height: 620px;
+  box-sizing: border-box;
+  background-color: $primary;
+
+  &-grid {
+    height: 100%;
+    // padding: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(auto, 25px);
+    justify-items: center;
+    overflow: auto;
+
+    a {
+      display: contents;
+    }
+
+    &::-webkit-scrollbar {
+      width: 18px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 15px 15px darken($background, 5%);
+      border: solid 6px transparent;
+      border-radius: 10px;
+    }
+  }
+}
